@@ -1,0 +1,121 @@
+[gd_scene load_steps=17 format=3 uid="uid://dhqcjmclutw5u"]
+
+[ext_resource type="Texture2D" uid="uid://hl6nx2rcsep1" path="res://assets/Warrior/SpriteSheet/Warrior_Sheet-Effect.png" id="1_w7okc"]
+[ext_resource type="Texture2D" uid="uid://b5ldlbg5mbdb8" path="res://assets/Mondstadt Background Wallpaper/windrise-background.png" id="2_beosp"]
+
+[sub_resource type="Animation" id="Animation_471pp"]
+resource_name = "cutscene"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u1w42"]
+_data = {
+"cutscene": SubResource("Animation_471pp")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf0tp"]
+atlas = ExtResource("1_w7okc")
+region = Rect2(138, 88, 69, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t40v0"]
+atlas = ExtResource("1_w7okc")
+region = Rect2(207, 88, 69, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smeig"]
+atlas = ExtResource("1_w7okc")
+region = Rect2(276, 88, 69, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8oea0"]
+atlas = ExtResource("1_w7okc")
+region = Rect2(0, 132, 69, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d73k1"]
+atlas = ExtResource("1_w7okc")
+region = Rect2(69, 132, 69, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xu6q"]
+atlas = ExtResource("1_w7okc")
+region = Rect2(138, 132, 69, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24xiv"]
+atlas = ExtResource("1_w7okc")
+region = Rect2(207, 132, 69, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1yf6"]
+atlas = ExtResource("1_w7okc")
+region = Rect2(276, 132, 69, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdgdb"]
+atlas = ExtResource("1_w7okc")
+region = Rect2(345, 132, 69, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omt0s"]
+atlas = ExtResource("1_w7okc")
+region = Rect2(0, 176, 69, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkv76"]
+atlas = ExtResource("1_w7okc")
+region = Rect2(69, 176, 69, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j7ask"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf0tp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t40v0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smeig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8oea0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d73k1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xu6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24xiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1yf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdgdb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omt0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkv76")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="cutscene" type="Node2D"]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_u1w42")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(360.75, 238)
+scale = Vector2(10.2391, 10.3182)
+sprite_frames = SubResource("SpriteFrames_j7ask")
+frame_progress = 0.935509
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="TileMapLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="TileMapLayer/ParallaxBackground"]
+position = Vector2(-1782, -999)
+scale = Vector2(2.0542, 1.99089)
+texture = ExtResource("2_beosp")
+centered = false

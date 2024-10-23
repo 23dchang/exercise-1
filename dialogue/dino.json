@@ -1,0 +1,14 @@
+[
+	{"???": "???", "Hello": "Hello!"}
+	{"???": "???", "Hello":	"It's been so long since I've met a traveler in these parts"}
+	{"???": "???", "Hello": "..."}
+	{"???": "???", "Hello": "Anyways, what's your name?"}
+	{"???": "Me", "Hi": player_input}
+	{"???": "???", "Hello": "Must be nice... I don't have a name because my parents ..."}
+	{"???": player_input, "Hi": "I'll name you."}
+	{"???": "???", "Hello": "You'll name me?? Really???"}
+	{"???": player_input, "Hi": "Yea, I'll name you ..."}
+	{"???": player_input, "Hi": player_input2}
+	{"???": player_input2, "Hello": input "huh... I LOVE IT!!!"}
+	{"???": player_input, "Hi": "Alright then, let's get going."}
+]
