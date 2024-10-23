@@ -1,15 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://dhqcjmclutw5u"]
+[gd_scene load_steps=15 format=3 uid="uid://dhqcjmclutw5u"]
 
 [ext_resource type="Texture2D" uid="uid://hl6nx2rcsep1" path="res://assets/Warrior/SpriteSheet/Warrior_Sheet-Effect.png" id="1_w7okc"]
 [ext_resource type="Texture2D" uid="uid://b5ldlbg5mbdb8" path="res://assets/Mondstadt Background Wallpaper/windrise-background.png" id="2_beosp"]
-
-[sub_resource type="Animation" id="Animation_471pp"]
-resource_name = "cutscene"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_u1w42"]
-_data = {
-"cutscene": SubResource("Animation_471pp")
-}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jf0tp"]
 atlas = ExtResource("1_w7okc")
@@ -98,24 +90,19 @@ animations = [{
 
 [node name="cutscene" type="Node2D"]
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_u1w42")
-}
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(360.75, 238)
 scale = Vector2(10.2391, 10.3182)
 sprite_frames = SubResource("SpriteFrames_j7ask")
-frame_progress = 0.935509
+frame_progress = 0.973399
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="TileMapLayer"]
 
 [node name="Sprite2D" type="Sprite2D" parent="TileMapLayer/ParallaxBackground"]
-position = Vector2(-1782, -999)
-scale = Vector2(2.0542, 1.99089)
+position = Vector2(-2625, -1512)
+scale = Vector2(2.86328, 2.64583)
 texture = ExtResource("2_beosp")
 centered = false
